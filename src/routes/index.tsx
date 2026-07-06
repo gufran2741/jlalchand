@@ -23,10 +23,10 @@ import {
   Briefcase,
 } from "lucide-react";
 
-import logoAsset from "@/assets/jls-logo.asset.json";
+import logoAsset from "@/assets/jls-logo.png";
 import heroBride from "@/assets/hero-bride.jpg";
 import weddingBride from "@/assets/wedding-bride.jpg";
-import showroomExterior from "@/assets/showroom-exterior.jpg.asset.json";
+import showroomExterior from "@/assets/showroom-exterior.jpg";
 import cNecklace from "@/assets/collection-necklace.jpg";
 import cMangalsutra from "@/assets/collection-mangalsutra.jpg";
 import cBangles from "@/assets/collection-bangles.jpg";
@@ -36,12 +36,12 @@ import cOffice from "@/assets/collection-office.jpg";
 import cBracelet from "@/assets/collection-bracelet.jpg";
 import cPendant from "@/assets/collection-pendant.jpg";
 import cDaily from "@/assets/collection-daily.jpg";
-import customerSuware from "@/assets/customer-suware.jpg.asset.json";
-import customerRedis from "@/assets/customer-redis.jpg.asset.json";
-import customerKubal from "@/assets/customer-kubal.jpg.asset.json";
-import customerPatankar from "@/assets/customer-patankar.jpg.asset.json";
-import customerAgre from "@/assets/customer-agre.jpg.asset.json";
-import customerFriends from "@/assets/customer-friends.png.asset.json";
+import customerSuware from "@/assets/customer-suware.jpg";
+import customerRedis from "@/assets/customer-redis.jpg";
+import customerKubal from "@/assets/customer-kubal.jpg";
+import customerPatankar from "@/assets/customer-patankar.jpg";
+import customerAgre from "@/assets/customer-agre.jpg";
+import customerFriends from "@/assets/customer-friends.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -215,7 +215,7 @@ function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
         <a href="#top" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="J Lalchand Saraf logo"
             className="h-12 w-12 rounded-full object-cover shadow-soft md:h-14 md:w-14"
             width={56}
@@ -495,7 +495,7 @@ function WhyUs() {
         <div className="relative">
           <div className="overflow-hidden rounded-[2rem] border border-gold/20 shadow-luxe">
             <img
-              src={showroomExterior.url}
+              src={showroomExterior}
               alt="J Lalchand Saraf jewellery showroom exterior in Ratnagiri"
               loading="lazy"
               width={1536}
@@ -722,37 +722,37 @@ function Legacy() {
 function Testimonials() {
   const stories = [
     {
-      image: customerSuware.url,
+      image: customerSuware,
       name: "Mr. & Mrs. Suware",
       quote: "A jeweller our family has trusted for generations.",
       tall: false,
     },
     {
-      image: customerAgre.url,
+      image: customerAgre,
       name: "Mr. Vighnesh Vijay Agre",
       quote: "Every visit feels like coming home to family.",
       tall: true,
     },
     {
-      image: customerRedis.url,
+      image: customerRedis,
       name: "Redis & Family",
       quote: "Purity, honesty and warmth — in every ornament.",
       tall: false,
     },
     {
-      image: customerPatankar.url,
+      image: customerPatankar,
       name: "Patankar & Family",
       quote: "Beautiful designs and truly transparent pricing.",
       tall: false,
     },
     {
-      image: customerFriends.url,
+      image: customerFriends,
       name: "Three Best Friends",
       quote: "Shopping here is always a memorable celebration.",
       tall: true,
     },
     {
-      image: customerKubal.url,
+      image: customerKubal,
       name: "Kubal & Family",
       quote: "Timeless craftsmanship, unmatched service.",
       tall: false,
@@ -1605,7 +1605,7 @@ function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="J Lalchand Saraf"
               className="h-14 w-14 rounded-full object-cover"
               width={56}
