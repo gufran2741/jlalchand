@@ -927,9 +927,43 @@ function AppointmentForm() {
     message: "",
   });
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+  
+    const formData = new FormData();
+  
+    formData.append("entry.1861816151", data.name);
+    formData.append("entry.978943001", data.phone);
+    formData.append("entry.482902447", data.weddingDate);
+    formData.append("entry.1313877613", data.visitDate);
+    formData.append("entry.662441475", data.category);
+    formData.append("entry.86972516", data.message);
+  
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSdGOfWSdfF7R8gWdixQNqWSZOK7Z4K1cSuhVZHqLT4u84v17g/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
+  
+      setSubmitted(true);
+  
+      setData({
+        name: "",
+        phone: "",
+        weddingDate: "",
+        category: "Bridal Set",
+        visitDate: "",
+        message: "",
+      });
+  
+    } catch (err) {
+      console.error(err);
+      alert("Unable to submit. Please try again.");
+    }
   };
 
   const onWhatsapp = () => {
