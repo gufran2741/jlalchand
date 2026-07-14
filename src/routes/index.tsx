@@ -42,6 +42,7 @@ import customerKubal from "@/assets/customer-kubal.jpg";
 import customerPatankar from "@/assets/customer-patankar.jpg";
 import customerAgre from "@/assets/customer-agre.jpg";
 import customerFriends from "@/assets/customer-friends.png";
+import OfferPopup from "@/components/OfferPopup";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -1781,27 +1782,31 @@ function FloatingActions() {
 /* ---------- Page ---------- */
 function LandingPage() {
   return (
-    <div className="min-h-screen bg-ivory pb-14 md:pb-0">
-      <Header />
-      <main>
-        <Hero />
-        <TrustStrip />
-        <Collections />
-        <WhyUs />
-        <WeddingSection />
-        <Bestsellers />
-        <Legacy />
-        <Testimonials />
-        <Purity />
-        <BuyingProcess />
-        <AppointmentForm />
-        <FAQ />
-        <GoogleReviewsSlider />
-        <StoreLocation />
-        <FinalCTA />
-      </main>
-      <Footer />
-      <FloatingActions />
-    </div>
+    <>
+      <OfferPopup />
+
+      <div className="min-h-screen bg-ivory pb-14 md:pb-0">
+        <Header />
+        <main>
+          <Hero />
+          <TrustStrip />
+          <Collections />
+          <WhyUs />
+          <WeddingSection />
+          <Bestsellers />
+          <Legacy />
+          <Testimonials />
+          <Purity />
+          <BuyingProcess />
+          <AppointmentForm />
+          <FAQ />
+          <GoogleReviewsSlider />
+          <StoreLocation />
+          <FinalCTA />
+        </main>
+        <Footer />
+        <FloatingActions />
+      </div>
+    </>
   );
 }
